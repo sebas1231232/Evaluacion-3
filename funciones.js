@@ -2,7 +2,7 @@ import { getData, save, remove, getDocumento, update } from "./firestore.js"
 let id = 0
 
 document.getElementById('btnGuardar').addEventListener('click', () => {
-    document.querySelectorAll('.form-control').forEach(item => {
+    document.querySelectorAll('.form-control,.form-select').forEach(item => {
         verificar(item.id)
     })
     if (document.querySelectorAll('.is-invalid').length == 0) {
