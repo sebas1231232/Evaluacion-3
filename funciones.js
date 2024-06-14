@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
                 document.getElementById('nick').value = c.nick
                 document.getElementById('fecha').value = c.fecha
-                document.getElementById('puntuacion').value = c.punt
+                document.getElementById('punt').value = c.punt
                 document.getElementById('tiempo').value = c.tiempo
                 document.getElementById('juego').value = c.juego
                 document.getElementById('dif').value = c.dif
