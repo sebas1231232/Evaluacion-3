@@ -22,9 +22,9 @@ const verificar = (id) => {
     }
 }
 const limpiar = () => {
-    document.querySelector('form','select').reset()
+    document.querySelector('form').reset()
 
-    document.querySelectorAll('.form-control').forEach(item => {
+    document.querySelectorAll('.form-control,.form-select').forEach(item => {
         item.classList.remove('is-invalid')
         item.classList.remove('is-valid')
         document.getElementById('e-' + item.name).innerHTML = ''
