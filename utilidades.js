@@ -21,6 +21,7 @@ const verificar = (id) => {
         }
     }
 }
+
 const limpiar = () => {
     document.querySelector('form').reset()
 
@@ -31,6 +32,8 @@ const limpiar = () => {
     })
 
     document.getElementById('btnGuardar').value = 'Guardar'
+
+    document.getElementById('nick').readOnly = false
 }
 
 const soloNumeros = (evt) => {
