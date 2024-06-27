@@ -11,6 +11,11 @@ const verificar = (id) => {
     else {
         input.classList.add('is-valid')
         div.innerHTML = ''
+        
+        if (nickExists) {
+            div.innerHTML =
+                '<span class="badge bg-danger">El nick ya esta en uso, utilice otro.</span>'}
+
         if (id == 'fecha') {
             const dia = validarFecha(input.value)
             if (dia < 1) {
