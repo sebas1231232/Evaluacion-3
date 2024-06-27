@@ -17,8 +17,9 @@ document.getElementById('btnGuardar').addEventListener('click', async () => {
         }
         const nickExists = await checkNickExists(jugador.nick)
         if (nickExists) {
-            alert('El nick ya está en uso, por favor elige otro.')
-        } else {
+            div.innerHTML =
+            '<span class="badge bg-danger">El nick ya esta en uso, utilice otro.</span>'}
+            else {
             if (document.getElementById('btnGuardar').value == 'Guardar') {
                 save(jugador)
             } else {
