@@ -1,7 +1,7 @@
 import { getData, save, remove, getDocumento, update } from "./firestore.js"
 let id = 0
 
-document.getElementById('btnGuardar').addEventListener('click', () => {
+document.getElementById('btnGuardar').addEventListener('click', async () => {
     document.querySelectorAll('.form-control,.form-select').forEach(item => {
         verificar(item.id)
     })
@@ -15,19 +15,26 @@ document.getElementById('btnGuardar').addEventListener('click', () => {
             dif: document.getElementById('dif').value,
             clasi: document.getElementById('clasi').value,
         }
-        if (document.getElementById('btnGuardar').value == 'Guardar') {
-            save(jugador)
-        } 
+
+        const nickExists = await checkNickExists(jugador.nick);
+        if (nickExists) {
+            alert('El nick ya está en uso, por favor elige otro.')}
         else {
-            update(id, jugador)
-            id = 0
-        }    
-        limpiar()
+
+            if (document.getElementById('btnGuardar').value == 'Guardar') {
+                save(jugador)
+            } 
+            else {
+                update(id, jugador)
+                id = 0
+            }    
+            limpiar()
+        }
     }
 })
 
-window.addEventListener('DOMContentLoaded', () => {
-    getData((datos) => {
+window.addEventListener('DOMContentLoaded', async () => {
+    getData(async (datos) => {
         let tabla = ''
 
         datos.forEach((doc) => {
