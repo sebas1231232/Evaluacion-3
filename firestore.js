@@ -38,6 +38,7 @@ export const update = (id, clasificacion) =>{
     updateDoc(doc(db,'Clasificacion',id),clasificacion)
 }
 
+
 export const checkNickExists = async (nick) => {
     const q = query(collection(db, 'Clasificacion'), where('nick', '==', nick));
     const querySnapshot = await getDocs(q);

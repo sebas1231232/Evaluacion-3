@@ -15,16 +15,13 @@ document.getElementById('btnGuardar').addEventListener('click', async () => {
             dif: document.getElementById('dif').value,
             clasi: document.getElementById('clasi').value,
         }
-
-        const nickExists = await checkNickExists(jugador.nick);
+        const nickExists = await checkNickExists(jugador.nick)
         if (nickExists) {
-            alert('El nick ya está en uso, por favor elige otro.')}
-        else {
-
+            alert('El nick ya está en uso, por favor elige otro.')
+        } else {
             if (document.getElementById('btnGuardar').value == 'Guardar') {
                 save(jugador)
-            } 
-            else {
+            } else {
                 update(id, jugador)
                 id = 0
             }    
@@ -33,8 +30,9 @@ document.getElementById('btnGuardar').addEventListener('click', async () => {
     }
 })
 
-window.addEventListener('DOMContentLoaded', async () => {
-    getData(async (datos) => {
+
+window.addEventListener('DOMContentLoaded', () => {
+    getData((datos) => {
         let tabla = ''
 
         datos.forEach((doc) => {

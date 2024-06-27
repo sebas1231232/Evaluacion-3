@@ -1,37 +1,3 @@
-import { checkNickExists } from "./firestore.js"
-
-export const verificar = async (id) => {
-    const input = document.getElementById(id)
-    if (id === 'nick') {
-        const nickValue = input.value.trim()
-        if (nickValue === '') {
-            input.classList.add('is-invalid')
-            input.classList.remove('is-valid')
-        } else {
-            const nickExists = await checkNickExists(nickValue)
-            if (nickExists) {
-                input.classList.add('is-invalid')
-                input.classList.remove('is-valid')
-                alert('El nick ya está en uso, por favor elige otro.')
-            } else {
-                input.classList.remove('is-invalid')
-                input.classList.add('is-valid')
-            }
-        }
-    } else {
-        if (input.value.trim() === '') {
-            input.classList.add('is-invalid')
-            input.classList.remove('is-valid')
-        } else {
-            input.classList.remove('is-invalid')
-            input.classList.add('is-valid')
-        }
-    }
-}
-
-
-
-
 const verificar = (id) => {
     const input = document.getElementById(id)
     const div = document.getElementById('e-' + id)
