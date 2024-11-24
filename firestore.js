@@ -6,12 +6,12 @@ import { addDoc, collection, deleteDoc, doc, getDoc, getFirestore, onSnapshot, u
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCCciAYK7sqGljRnjKljvgeXCMJzv85G1U",
-  authDomain: "actividad1-86ad4.firebaseapp.com",
-  projectId: "actividad1-86ad4",
-  storageBucket: "actividad1-86ad4.appspot.com",
-  messagingSenderId: "439746215965",
-  appId: "1:439746215965:web:13ec021871e515b5a486f4"
+    apiKey: "AIzaSyCCciAYK7sqGljRnjKljvgeXCMJzv85G1U",
+    authDomain: "actividad1-86ad4.firebaseapp.com",
+    projectId: "actividad1-86ad4",
+    storageBucket: "actividad1-86ad4.firebasestorage.app",
+    messagingSenderId: "439746215965",
+    appId: "1:439746215965:web:13ec021871e515b5a486f4"
 };
 
 // Initialize Firebase
