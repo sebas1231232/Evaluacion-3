@@ -6,12 +6,12 @@ import { addDoc, collection, deleteDoc, doc, getDoc, getFirestore, onSnapshot, u
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDwO4ggNwqOlC0tPQQSvpSrfgrl_VMlWzI",
-  authDomain: "eva3-e47d0.firebaseapp.com",
-  projectId: "eva3-e47d0",
-  storageBucket: "eva3-e47d0.appspot.com",
-  messagingSenderId: "167098148698",
-  appId: "1:167098148698:web:7d01116c34ecd15132f563"
+    apiKey: "AIzaSyDwO4ggNwqOlC0tPQQSvpSrfgrl_VMlWzI",
+    authDomain: "eva3-e47d0.firebaseapp.com",
+    projectId: "eva3-e47d0",
+    storageBucket: "eva3-e47d0.firebasestorage.app",
+    messagingSenderId: "167098148698",
+    appId: "1:167098148698:web:7d01116c34ecd15132f563"
 };
 
 // Initialize Firebase
